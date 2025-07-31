@@ -9,7 +9,7 @@
 <body>
   <div class="login-container">
     <div class="logo-section">
-      <img src="./image/Logo.png" alt="Cash G Logo" class="logo" />
+      <img src="./img/Logo.png" alt="Cash G Logo" class="logo" />
       <h2></h2>
     </div>
     <h3 class="title">Log in to your Account</h3>
@@ -18,15 +18,15 @@
       <div class="input-group">
         <label>
           <span class="icon"></span>
-          <img src="./image/Shape.png" />
-          <input type="email" placeholder="Enter your Email" required />
+          <img src="./img/Shape.png" />
+          <input type="email" placeholder="Enter your Email" />
         </label>
       </div>
       <div class="input-group">
         <label>
           <span class="icon"></span>
-          <img src="./image/Shape (1).png" />
-          <input type="password" placeholder="Enter your Password" required />
+          <img src="./img/Shape (1).png" />
+          <input type="password" placeholder="Enter your Password" />
         </label>
       </div>
       
@@ -42,12 +42,28 @@
       </div>
 
       <div class="social-buttons">
-        <button class="social facebook">Facebook</button>
-        <button class="social google">Google</button>
+        <button class="social facebook" aria-label="Continue with Facebook">
+          <div class="social-icon">
+            <img src="img/facebook.png" alt="Facebook" width="32" height="32" />
+          </div>
+          <span>Facebook</span>
+        </button>
+        <button class="social google" aria-label="Continue with Google">
+          <div class="social-icon">
+            <img src="img/google.png" alt="Google" width="32" height="32">
+          </div>
+          <span>Google</span>
+        </button>
       </div>
 
       <p class="signup">Don’t you have an Account? <a href="#">Sign Up</a></p>
     </form>
   </div>
+  <script>
+    document.querySelector('.login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      window.location.href = 'index.html';
+    });
+  </script>
 </body>
 </html>
