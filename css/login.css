@@ -15,8 +15,8 @@ body {
 
 .login-container {
   width: 100%;
-  max-width: 400px;
-  padding: 30px 20px;
+  max-width: 500px;
+  padding: 40px 30px;
   text-align: center;
 }
 
@@ -28,8 +28,8 @@ body {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
 }
 
@@ -40,8 +40,8 @@ body {
 }
 
 .title {
-  margin-bottom: 25px;
-  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #000;
 }
@@ -54,27 +54,39 @@ body {
 .input-group label {
   display: flex;
   align-items: center;
-  border: 1px solid #900;
-  border-radius: 10px;
-  padding: 10px;
+  border: 1.5px solid #900;
+  border-radius: 12px;
+  padding: 15px;
+  height: 55px;
+  gap: 12px;
 }
 
 .input-group .icon {
-  margin-right: 10px;
   color: #900;
+}
+
+.input-group img {
+  width: 19px;
+  height: 17px;
+  flex-shrink: 0;
 }
 
 .input-group input {
   border: none;
   outline: none;
   width: 100%;
+  font-size: 16px;
+  padding: 8px 0;
 }
 
 .options {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #363130;
+  font-weight: normal;
+  position: relative;
 }
 
 .login-button {
@@ -82,75 +94,216 @@ body {
   border: none;
   border-radius: 30px;
   color: #fff;
-  padding: 12px;
+  padding: 15px;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.login-button:hover {
+  background: #B90C0F;
+  color: #fff;
 }
 
 .divider {
-  text-align: center;
-  position: relative;
-  margin: 20px 0;
-  font-size: 0.9rem;
-  color: #666;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #363130;
+  font-size: 15px;
+  margin: 18px 0 0 0;
+  gap: 8px;
 }
 
 .divider::before,
 .divider::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  width: 40%;
-  height: 1px;
-  background: #ccc;
-}
-
-.divider::before {
-  left: 0;
-}
-
-.divider::after {
-  right: 0;
+  flex: 1;
+  height: 1.5px;
+  background: #bdbdbd;
+  border-radius: 1px;
 }
 
 .social-buttons {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
 .social {
   flex: 1;
-  padding: 10px;
-  margin: 0 5px;
-  border: 1px solid #900;
-  border-radius: 20px;
-  font-weight: bold;
+  margin-top: 30px;
+  padding: 9px 0;
+  border: 1.5px solid #900;
+  border-radius: 30px;
+  font-size: 16px;
+  color: #363130;
+  background: #fff;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: sans-serif;
+  font-weight: 700;
 }
 
-.fb {
-  border-radius: 20px;
+.social.facebook {
+  border-color: #900;
+  color: #36313088;
 }
 
-.facebook {
-  color: #817d7d;
+.social.google {
+  border-color: #900;
+  color: #EA4335;
 }
 
+.social span, .social.google, .social.facebook {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #363130b0;
+}
 
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-left: 5px;
+}
 
-.google {
-  color: #9d9999;
+.social img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .signup a {
   color: #900;
   font-weight: bold;
   text-decoration: none;
+}
+
+.options a {
+  color: #363130;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.options input[type="checkbox"] {
+  position: static;
+  top: auto;
+  left: auto;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #900 !important;
+  border-radius: 0;
+  background-color: #fff;
+  appearance: none;
+  margin-left: 0;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.options label {
+  margin-left: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 100%;
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
+  
+  .input-group label {
+    padding: 12px;
+    height: 50px;
+  }
+  
+  .input-group input {
+    font-size: 16px;
+  }
+  
+  .login-button {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+  
+  .social-buttons {
+    flex-direction: row;
+    gap: 12px;
+  }
+  
+  .social {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+  
+  .social span {
+    font-size: 16px;
+  }
+  
+  .social img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .options {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px 15px;
+  }
+  
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .input-group label {
+    padding: 10px;
+    height: 45px;
+  }
+  
+  .login-button {
+    padding: 10px;
+    font-size: 1rem;
+  }
 }

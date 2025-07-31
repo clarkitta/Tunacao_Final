@@ -1,0 +1,380 @@
+/* Transaction Page Styles */
+.transaction-header {
+    display: flex;
+    align-items: center;
+    padding: 89px 38px 20px;
+    gap: 20px;
+}
+
+.back-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transaction-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.1em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+    flex: 1;
+}
+
+.balance-card-transaction {
+    background: #FFCC00;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 800px;
+    border: 1px solid #DFF7E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balance-info-transaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.balance-label-transaction {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: #000000;
+    text-align: center;
+}
+
+.balance-amount-transaction {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    text-align: center;
+    color: #000000;
+}
+
+.summary-cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px auto;
+    width: 800px;
+}
+
+.income-card {
+    background: #000000;
+    border-radius: 14.89px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 380px;
+    height: 101px;
+    position: relative;
+}
+
+.income-icon {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.income-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.income-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: #F1FFF3;
+    text-align: center;
+}
+
+.income-amount {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.1em;
+    text-transform: capitalize;
+    text-align: center;
+    color: #F1FFF3;
+}
+
+.expense-card {
+    background: #F1FFF3;
+    border-radius: 14.89px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 380px;
+    height: 101px;
+    position: relative;
+}
+
+.expense-icon {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expense-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.expense-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: #093030;
+    text-align: center;
+}
+
+.expense-amount {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.1em;
+    text-transform: capitalize;
+    text-align: center;
+    color: #FF3B30;
+}
+
+.white-frame-transaction {
+    background: #FFFFFF;
+    border-radius: 31px 31px 0 0;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+    min-height: 600px;
+}
+
+/* Fixed Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Transaction Items Styling */
+.transaction-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #E0E0E0;
+    position: relative;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-icon {
+    width: 57px;
+    height: 53px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transaction-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.transaction-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.transaction-main::before {
+    content: '';
+    position: absolute;
+    left: 23%;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background-color: #000000;
+}
+
+.transaction-main::after {
+    content: '';
+    position: absolute;
+    left: 55%;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background-color: #000000;
+}
+
+.transaction-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #052224;
+    flex: 1;
+}
+
+.transaction-category {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #052224;
+    text-align: center;
+    flex: 1;
+}
+
+.transaction-amount {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: right;
+    flex: 1;
+}
+
+.transaction-amount.positive {
+    color: #052224;
+}
+
+.transaction-amount.negative {
+    color: #093030;
+}
+
+.transaction-time {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #000000;
+    margin-left: 0;
+    margin-top: 2px;
+}
+
+/* Mobile Media Query for Transactions Page */
+@media (max-width: 768px) {
+    .main-bg {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 120px;
+}
+    
+    .transaction-header {
+        padding: 60px 20px 15px;
+        gap: 15px;
+    }
+    
+    .transaction-title {
+        font-size: 18px;
+        text-align: center;
+        flex: 1;
+    }
+    
+    .balance-card-transaction {
+        margin: 15px 10px;
+        padding: 15px;
+        border-radius: 12px;
+        width: 95%;
+    }
+    
+    .balance-label-transaction {
+        font-size: 14px;
+    }
+    
+    .balance-amount-transaction {
+        font-size: 20px;
+    }
+    
+    .summary-cards {
+        margin: 15px 10px;
+        gap: 10px;
+        width: 95%;
+        flex-direction: row;
+    }
+    
+    .income-card,
+    .expense-card {
+        width: 48%;
+        height: 80px;
+        padding: 15px;
+    }
+    
+    .income-icon,
+    .expense-icon {
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15px;
+        height: 15px;
+    }
+    
+    .income-content,
+    .expense-content {
+        margin-top: 15px;
+        gap: 6px;
+    }
+    
+    .income-label,
+    .expense-label {
+        font-size: 13px;
+    }
+    
+    .income-amount,
+    .expense-amount {
+        font-size: 16px;
+    }
+    
+    .white-frame-transaction {
+        padding: 15px;
+        margin-top: 15px;
+        flex: 1;
+        margin-bottom: 0;
+        border-radius: 31px 31px 0 0;
+    }
+} 

@@ -1,0 +1,944 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;700&family=League+Spartan:wght@500&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #FFFFFF;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+.app-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Background */
+.main-bg {
+    background: linear-gradient(180deg, rgba(83, 6, 7, 0.88) 0%, rgba(185, 12, 15, 0.88) 31.73%);
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 120px;
+}
+
+/* Welcome Text */
+.welcome-text {
+    padding: 89px 38px 0;
+    color: white;
+}
+
+.welcome-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.1em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.welcome-text p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.5em;
+    color: #FFFFFF;
+}
+
+/* Notification Icon */
+.notification-icon {
+    position: absolute;
+    top: 87px;
+    right: 36px;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border-radius: 25.7143px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Balance Card */
+.balance-card {
+    padding: 20px;
+    margin: 20px;
+    margin-right: 300px;
+    margin-left: 300px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.balance-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.balance-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.balance-icon {
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.balance-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.balance-amount {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.balance-amount.amount {
+    color: #F1FFF3;
+}
+
+.balance-amount.expense {
+    color: #FF3B30;
+}
+
+/* Divider line */
+.balance-divider {
+    width: 2px;
+    height: 70px;
+    background: #FFFFFF;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 750px;
+    height: 45px;
+    background: #000000;
+    border-radius: 26.5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    margin-left: 440px;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #FFCC00;
+    border-radius: 26.5px;
+    width: 100%;
+    margin-left: 8em;
+}
+
+.progress-percentage {
+    position: absolute;
+    left: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: #F1FFF3;
+    z-index: 5;
+}
+
+.progress-amount {
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    color: #052224;
+    z-index: 5;
+}
+
+/* Progress Text */
+.progress-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 15px;
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.progress-checkbox {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0px;
+    line-height: 1.5em;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* White Frame - Only for yellow card and below */
+.white-frame {
+    background: #FFFFFF;
+    border-radius: 31px 31px 0 0;
+    padding: 20px;
+    margin-top: -20px;
+    position: relative;
+    z-index: 1;
+    min-height: 600px;
+}
+
+/* Yellow Summary Card */
+.yellow-summary-card {
+    background: #FFCC00;
+    border-radius: 31px;
+    display: flex;
+    align-items: center;
+    padding: 24px 32px;
+    width: 750px;
+    margin: 20px auto 60px auto;
+    box-shadow: 0 2px 12px rgba(255, 204, 0, 0.08);
+    position: relative;
+    min-height: 250px;
+    z-index: 2;
+}
+
+.yellow-summary-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+}
+
+.yellow-summary-icon {
+    background: none;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yellow-summary-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.yellow-summary-divider {
+    width: 2px;
+    height: 150px;
+    background: #fff;
+    margin: 0 40px;
+    border-radius: 1px;
+}
+
+.yellow-summary-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    flex: 1;
+    gap: 18px;
+    padding-right: 40px;
+}
+
+.yellow-summary-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.yellow-summary-miniicon {
+    width: 28px;
+    height: 28px;
+}
+
+.yellow-summary-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+}
+
+.yellow-summary-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    color: #000;
+    font-weight: 700;
+}
+
+.yellow-summary-value.red {
+    color: #FF3B30;
+}
+
+.yellow-summary-horizontal-divider {
+    width: 100%;
+    height: 1px;
+    background: #ffffff;
+    margin: 10px 0;
+}
+
+/* Time Selector */
+.time-selector {
+    background: linear-gradient(90deg, #530607 0%, #B90C0F 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 5px;
+    margin: 20px auto;
+    margin-top: -20px;
+    width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 3;
+}
+
+.selector-option {
+    flex: 1;
+    height: 39px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 3.5em;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+    transition: instant;
+}
+
+.selector-option:hover {
+    background: rgba(255, 204, 0, 0.3);
+}
+
+.selector-option.active {
+    background: #FFCC00;
+    border-radius: 20px;
+    height: 50px;
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+/* Transactions Section */
+.transactions-section {
+    background: transparent;
+    padding: 30px 37px;
+    border-radius: 20px 20px 0 0;
+    margin: -20px auto 0 auto;
+    width: 800px;
+    position: relative;
+    z-index: 5;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #000000;
+    position: relative;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+/* Removed hover effect */
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-icon {
+    width: 57px;
+    height: 53px;
+    background: #000000;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.transaction-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.transaction-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.transaction-main::before {
+    content: '';
+    position: absolute;
+    left: 23%;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background-color: #000000;
+}
+
+.transaction-main::after {
+    content: '';
+    position: absolute;
+    left: 55%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #000000;
+}
+
+.transaction-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5em;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #052224;
+    flex: 1;
+}
+
+.transaction-category {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5em;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #052224;
+    text-align: center;
+    flex: 1;
+}
+
+.transaction-amount {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5em;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    flex: 1;
+}
+
+.transaction-amount.positive {
+    color: #052224;
+}
+
+.transaction-amount.negative {
+    color: #FF3B30;
+}
+
+.transaction-time {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.5em;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #000000;
+    margin-left: 0;
+    margin-top: 2px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    background: linear-gradient(90deg, rgba(166, 0, 3, 0.88) 0%, rgba(124, 3, 5, 0.88) 0.01%, rgba(124, 3, 5, 0.88) 99.96%, rgba(166, 0, 3, 0.88) 99.97%);
+    border: 1px solid #000000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 36px 60px 41px;
+    gap: 140px;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+}
+
+.nav-item.active {
+    background: #FFCC00;
+    border-radius: 22px;
+    padding: 10px 16px;
+    margin: -10px -16px;
+}
+
+.nav-item svg {
+    transition: all 0.3s ease;
+}
+
+.nav-item.active svg path {
+    stroke: #052224;
+}
+
+.nav-item:not(.active) svg path {
+    stroke: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .balance-card {
+        margin: 15px;
+    }
+    
+    .time-selector {
+        margin: 15px;
+    }
+    
+    .transactions-section {
+        padding: 25px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-text {
+        padding: 60px 20px 0;
+    }
+    
+    .welcome-text h1 {
+        font-size: 18px;
+    }
+    
+    .welcome-text p {
+        font-size: 12px;
+    }
+    
+    .notification-icon {
+        top: 60px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .balance-card {
+        margin: 15px;
+        padding: 15px;
+    }
+    
+    .amount, .expense {
+        font-size: 20px;
+    }
+    
+    .time-selector {
+        margin: 15px;
+    }
+    
+    .transactions-section {
+        padding: 20px 20px;
+    }
+    
+    .transaction-icon {
+        width: 45px;
+        height: 42px;
+    }
+    
+    .transaction-name, .transaction-amount {
+        font-size: 14px;
+    }
+    
+    .bottom-nav {
+        padding: 20px 30px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-container {
+        width: 100%;
+    }
+    
+    .main-bg {
+        min-height: 100vh;
+    }
+    
+    .welcome-text {
+        padding: 40px 15px 0;
+    }
+    
+    .welcome-text h1 {
+        font-size: 16px;
+    }
+    
+    .welcome-text p {
+        font-size: 11px;
+    }
+    
+    .notification-icon {
+        top: 40px;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .balance-card {
+        margin: 10px;
+        padding: 12px;
+        border-radius: 20px;
+    }
+    
+    .amount, .expense {
+        font-size: 18px;
+    }
+    
+    .time-selector {
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    .selector-option {
+        font-size: 13px;
+        height: 28px;
+    }
+    
+    .selector-option.active {
+        height: 40px;
+    }
+    
+    .transactions-section {
+        padding: 15px 15px;
+    }
+    
+    .transaction-item {
+        padding: 12px 0;
+    }
+    
+    .transaction-icon {
+        width: 40px;
+        height: 37px;
+    }
+    
+    .transaction-name, .transaction-amount {
+        font-size: 13px;
+    }
+    
+    .transaction-category {
+        font-size: 11px;
+    }
+    
+    .transaction-time {
+        font-size: 10px;
+    }
+    
+    .bottom-nav {
+        padding: 15px 20px;
+        gap: 20px;
+    }
+}
+
+/* New Mobile Layout Media Query */
+@media (max-width: 768px) {
+    .app-container {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .main-bg {
+        min-height: 100vh;
+        padding: 0 10px;
+    }
+    
+    .welcome-text {
+        padding: 60px 20px 0;
+    }
+    
+    .welcome-text h1 {
+        font-size: 18px;
+    }
+    
+    .welcome-text p {
+        font-size: 12px;
+    }
+    
+    .notification-icon {
+        top: 60px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .balance-card {
+        margin: 15px 10px;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .balance-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .balance-divider {
+        display: none;
+    }
+    
+    .balance-amount {
+        font-size: 24px;
+    }
+    
+    .progress-bar {
+        width: 90%;
+        margin: 15px auto;
+        height: 35px;
+        background: #000000;
+        position: relative;
+    }
+    
+    .progress-fill {
+        margin-left: 30%;
+        width: 70%;
+        background: #FFCC00;
+        height: 100%;
+        border-radius: 26.5px;
+    }
+    
+    .progress-percentage {
+        font-size: 11px;
+        left: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .progress-amount {
+        font-size: 11px;
+        right: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .progress-text {
+        margin-bottom: 30px;
+        gap: 8px;
+    }
+    
+    .progress-checkbox {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+    
+    .white-frame {
+        padding: 15px;
+        margin-top: -10px;
+    }
+    
+    .yellow-summary-card {
+        width: 95%;
+        margin: 15px auto 40px auto;
+        padding: 20px;
+        flex-direction: row;
+        gap: 20px;
+        min-height: 250px;
+    }
+    
+    .yellow-summary-left {
+        width: 200px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .yellow-summary-divider {
+        display: block;
+        height: 120px;
+        margin: 0 20px;
+    }
+    
+    .yellow-summary-right {
+        padding-right: 20px;
+        gap: 15px;
+        flex: 1;
+    }
+    
+    .yellow-summary-horizontal-divider {
+        margin: 8px 0;
+    }
+    
+    .time-selector {
+        width: 95%;
+        margin: 15px auto;
+        gap: 15px;
+    }
+    
+    .selector-option {
+        font-size: 14px;
+        height: 35px;
+    }
+    
+    .selector-option.active {
+        height: 45px;
+    }
+    
+    .transactions-section {
+        width: 95%;
+        margin: 15px auto;
+        padding: 20px 15px;
+    }
+    
+    .transaction-item {
+        padding: 12px 0;
+        gap: 15px;
+    }
+    
+    .transaction-icon {
+        width: 45px;
+        height: 42px;
+    }
+    
+    .transaction-name, .transaction-amount {
+        font-size: 14px;
+    }
+    
+    .transaction-category {
+        font-size: 12px;
+    }
+    
+    .transaction-time {
+        font-size: 11px;
+    }
+    
+    .bottom-nav {
+        padding: 20px 30px;
+        gap: 60px;
+        width: 95%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    
+    .nav-item img {
+        width: 22px;
+        height: auto;
+    }
+}
+
+/* Removed hover effect for transaction icon */
+
+.selector-option.active {
+    transform: scale(1.02);
+}
+
+/* Smooth transitions */
+* {
+    transition: all 0.2s ease;
+}
+
+/* Focus states for accessibility */
+.selector-option:focus,
+.nav-item:focus,
+.transaction-item:focus {
+    outline: 2px solid #FFCC00;
+    outline-offset: 2px;
+} 
+
+.social-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 32px 0 16px 0;
+    gap: 12px;
+}
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: #E0E0E0;
+}
+.divider-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    padding: 0 12px;
+}
